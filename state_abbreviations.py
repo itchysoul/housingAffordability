@@ -1,0 +1,59 @@
+
+abbrev_table = """State Name	USPS Abbreviation	Traditional Abbreviation
+Alabama	AL	Ala.
+Alaska	AK	Alaska
+Arizona	AZ	Ariz.
+Arkansas	AR	Ark.
+California	CA	Calif.
+Colorado	CO	Colo.
+Connecticut	CT	Conn.
+Delaware	DE	Del.
+Florida	FL	Fla.
+Georgia	GA	Ga.
+Hawaii	HI	Hawaii
+Idaho	ID	Idaho
+Illinois	IL	Ill.
+Indiana	IN	Ind.
+Iowa	IA	Iowa
+Kansas	KS	Kans.
+Kentucky	KY	Ky.
+Louisiana	LA	La.
+Maine	ME	Maine
+Maryland	MD	Md.
+Massachusetts	MA	Mass.
+Michigan	MI	Mich.
+Minnesota	MN	Minn.
+Mississippi	MS	Miss.
+Missouri	MO	Mo.
+Montana	MT	Mont.
+Nebraska	NE	Neb. or Nebr.
+Nevada	NV	Nev.
+New Hampshire	NH	N.H.
+New Jersey	NJ	N.J.
+New Mexico	NM	N.Mex.
+New York	NY	N.Y.
+North Carolina	NC	N.C.
+North Dakota	ND	N.Dak.
+Ohio	OH	Ohio
+Oklahoma	OK	Okla.
+Oregon	OR	Ore. or Oreg.
+Pennsylvania	PA	Pa.
+Rhode Island	RI	R.I.
+South Carolina	SC	S.C.
+South Dakota	SD	S.Dak.
+Tennessee	TN	Tenn.
+Texas	TX	Tex. or Texas
+Utah	UT	Utah
+Vermont	VT	Vt.
+Virginia	VA	Va.
+Washington	WA	Wash.
+West Virginia	WV	W.Va.
+Wisconsin	WI	Wis. or Wisc.
+Wyoming	WY	Wyo."""
+
+lines = abbrev_table.split('\n')
+state_codes = [l.split('\t')[1] for l in lines[1:]]
+
+assert len(state_codes) == 50
+print('state codes parsed')
+
