@@ -51,7 +51,7 @@ class State:
     def calculate_housing_expense(self):
         self.build_raw_data_frame()
         self.data['HousingExpense $'] = self.data['MedianHomePrice']
-        self.data['HousingExpense $'] *= self.data['30yrRate'] * (1 + self.data['30yrRate']) ** 30 / 100
+        self.data['HousingExpense $'] *= self.data['30yrRate'] * (1 + self.data['30yrRate']) ** 30
         self.data['HousingExpense $'] /= (1 + self.data['30yrRate']) ** 30 - 1
         self.data['HousingExpense % of income'] = self.data['HousingExpense $'] / self.data['MedianIncome']
 
