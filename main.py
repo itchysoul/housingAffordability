@@ -9,19 +9,19 @@ def main():
     fig, ax = plt.subplots()
     plt.title("Idaho Housing Affordability")
     ax.plot(idaho_data['HousingExpense % of income'], color='blue')
-    ax.set_ylabel("Housing Expense as % of income", color='blue')
-    ax2 = ax.twinx()
-    ax2.plot(idaho_data['MedianHomePrice'], color='grey')
-    ax2.set_ylabel("Median Home Price", color='grey')
+    ax.set_ylabel("Housing Expense as % of income", color='black')
+    ax.plot(idaho_data['Revised HousingExpense % of income'], color='red')
 
     plt.show()
 
-    fig.savefig('housing_affordability.jpg',
+    fig.savefig('housing_affordability40Year.jpg',
                 format='jpeg',
                 dpi=100,
                 bbox_inches='tight')
 
     idaho_data.to_csv('Idaho.csv')
 
+
 if __name__ == '__main__':
     main()
+
