@@ -84,3 +84,4 @@ class States:
     def calculate_housing_expense(self):
         for state in self.states.values():
             state.calculate_housing_expense()
+

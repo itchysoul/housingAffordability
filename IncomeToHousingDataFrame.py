@@ -26,5 +26,9 @@ class IncomeToHousingData:
         self.states.set_mortgage_rates(self.mortgage_rates)
 
     def get_housing_burden_variance(self):
-        pass
+        cols = {}
+        for state in self.states.states.values():
+            cols[state.abbrev] = state.data['HousingExpense % of income']
+        state_expense_data = pd.DataFrame(cols)
+        return state_expense_data
 
